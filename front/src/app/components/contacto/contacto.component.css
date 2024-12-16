@@ -1,0 +1,26 @@
+.contact-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .contact-container h1 {
+    font-size: 2em;
+    color: black;
+  }
+  
+  .contact-container p, .contact-container ul {
+    font-size: 1.2em;
+    color: rgb(65, 54, 54);
+  }
+  
+  .contact-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-container li {
+    margin: 10px 0;
+  }
+  

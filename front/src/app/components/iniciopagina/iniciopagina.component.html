@@ -1,0 +1,38 @@
+<div class="iniciopagina-container">
+  <header>
+      <div class="logo">ESPACIOS BOLIVIA</div>
+      <nav class="navegacion">
+          <a href="/iniciopagina">INICIO</a>
+          <a href="/calendario">CALENDARIO</a>
+          <a href="/iniciosesion">INICIAR SESIÓN</a>
+          <a href="/registrogeneral" class="boton-registro">REGISTRO</a>
+      </nav>
+  </header>
+
+  <section class="hero">
+      <h2>PRÓXIMOS EVENTOS</h2>
+  </section>
+
+  <!-- Contenedor de eventos -->
+  <div class="eventos-container" *ngIf="eventos.length > 0; else noEventos">
+      <div class="evento-card" *ngFor="let evento of eventos">
+          <h3>{{ evento.nombre }}</h3>
+          <p>{{ evento.tipo_evento }}</p>
+          <p>{{ evento.fecha_evento }}</p>
+          <p>{{ evento.hora_inicio }} - {{ evento.hora_fin }}</p>
+          <p>{{ evento.espacio }}</p>
+      </div>
+  </div>
+  <ng-template #noEventos>
+      <p>No hay eventos disponibles en este momento.</p>
+  </ng-template>
+</div>
+
+<footer>
+    <p>&copy; 2024 Espacios Bolivia. Todos los derechos reservados.</p>
+    <div class="footer-links">
+        <a href="/contacto">Contacto</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/terminosycondiciones">Términos y Condiciones</a>
+    </div>
+</footer>
